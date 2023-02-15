@@ -34,7 +34,6 @@ include 'Configuracion.php';
                     <li role="presentation" class="active"><a href="index.php">Inicio</a></li>
                     <li role="presentation"><a href="VerCarta.php">Carrito de Compras</a></li>
                     <li role="presentation"><a href="Pagos.php">Pagar</a></li>
-                    <li role="presentation"><a href="https://www.configuroweb.com/46-aplicaciones-gratuitas-en-php-python-y-javascript/#Aplicaciones-gratuitas-en-PHP,-Python-y-Javascript">ConfiguroWeb</a></li>
                 </ul>
             </div>
 
@@ -48,17 +47,17 @@ include 'Configuracion.php';
                     if ($query->num_rows > 0) {
                         while ($row = $query->fetch_assoc()) {
                     ?>
-                            <div class="item col-lg-4">
+                            <div class="item col-lg-3">
                                 <div class="thumbnail">
                                     <div class="caption">
-                                        <h4 class="list-group-item-heading"><?php echo $row["name"]; ?></h4>
-                                        <p class="list-group-item-text"><?php echo $row["description"]; ?></p>
+                                        
                                         <div class="row">
-                                            <div class="col-md-6">
-                                                <p class="lead"><?php echo '$' . $row["price"] . ' COP'; ?></p>
-                                            </div>
-                                            <div class="col-md-6">
-                                                <a class="btn btn-success" href="AccionCarta.php?action=addToCart&id=<?php echo $row["id"]; ?>">Enviar al Carrito</a>
+                                            
+                                            <div class="col-md-5">
+                                                <!--<a class="btn btn-success" href="AccionCarta.php?action=addToCart&id=<?php echo $row["id"]; ?>">Enviar al Carrito</a>-->
+                                                <a href="AccionCarta.php?action=addToCart&id=<?php echo $row["id"]; ?>"> 
+                                                <img src="voluminoso.jpg">
+                                                </a>
                                             </div>
                                         </div>
                                     </div>
